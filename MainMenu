@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class MainMenu {
+
+	public static void main(String[] args) throws InterruptedException {
+		Scanner s = new Scanner(System.in);
+		Introduction i = new Introduction();
+		CharacterBuild c = new CharacterBuild();
+		c.haracterBuild(4);
+		System.out.print("\n\n		Please enter your Name: ");
+		String wantedName = s.nextLine();
+		i.ntro(wantedName);
+		c.haracterBuild(4);
+	}
+
+}
