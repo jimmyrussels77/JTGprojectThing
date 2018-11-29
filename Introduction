@@ -1,0 +1,131 @@
+import java.util.Scanner;
+import java.util.Random;
+import java.util.concurrent.TimeUnit;
+public class Introduction {
+
+	public void ntro(String wantedName) throws InterruptedException{
+Scanner s = new Scanner(System.in);
+String genderCoin;
+System.out.println("//////////////////////////////////////////////////////////////////////////////////////");
+System.out.println("////////////////////////////// Welcome to \"The project\" ////////////////////////////");
+System.out.println("//////////////////////////////////////////////////////////////////////////////////////");
+TimeUnit.SECONDS.sleep(2);
+System.out.println("\nGreetings " + wantedName + "!");
+TimeUnit.SECONDS.sleep(2);
+System.out.println("	        You are more than your day job.");
+TimeUnit.SECONDS.sleep(2);
+System.out.println("	        (despite your lack of hobbies)\n");
+TimeUnit.SECONDS.sleep(1);
+System.out.println("	        You are important.");
+TimeUnit.SECONDS.sleep(2);
+System.out.println("	        (despite the insermountable evidence to the contrary)\n");
+TimeUnit.SECONDS.sleep(3);
+System.out.println("		You are more than a cog in the system.\n");
+TimeUnit.SECONDS.sleep(2);
+System.out.println("You aren't; however, named " +wantedName + ".");
+TimeUnit.SECONDS.sleep(2);
+System.out.println("and you don't have the money");
+TimeUnit.SECONDS.sleep(2);
+System.out.println("nor the time ");
+TimeUnit.SECONDS.sleep(2);
+System.out.println("to legally change it yourself.");
+TimeUnit.SECONDS.sleep(2);
+System.out.println("(yet)");
+TimeUnit.SECONDS.sleep(1);
+System.out.println("\nAh, I'm beginning to remember it all now, yes.\n\n\n\n");
+TimeUnit.SECONDS.sleep(2);
+System.out.println("	About 18 years ago two sleep deprived 20-something year olds survived 11 hours of labor to see their new baby come to this world.\n");
+TimeUnit.SECONDS.sleep(4);
+//Gender Selection/coin flip
+int escape=0;
+int happy=0;
+String gender="";
+	while (escape==0) {
+		System.out.println("					---Call the coin flip for gender.");
+		System.out.println("				(1) I want Male to be heads and Female to be tails.");
+		System.out.println("				(2) I want Female to be heads and Male to be tails.");
+		int genderCoinFlip = coinFlip(0);
+		genderCoin = s.nextLine();
+			if (genderCoin.equals("1") && genderCoinFlip==1) {
+			System.out.println("Male was assigned as heads; and with a mighty flip, the coin has landed on heads.");
+			TimeUnit.SECONDS.sleep(4);
+			gender="He";
+			++escape;
+			++happy;
+			}
+			if (genderCoin.equals("1") && genderCoinFlip==0) {
+			System.out.println("Male was assigned as heads; and with a mighty flip, the coin has landed on tails.");
+			TimeUnit.SECONDS.sleep(4);
+			gender="She";
+			++escape;
+			}
+			if (genderCoin.equals("2") && genderCoinFlip==1) {
+			System.out.println("Female was assigned as heads; and with a mighty flip, the coin has landed on heads.");
+			TimeUnit.SECONDS.sleep(4);
+			gender="She";
+			++escape;
+			++happy;
+			}
+			if (genderCoin.equals("2") && genderCoinFlip==0) {
+			System.out.println("Female was assigned as heads; and with a mighty flip, the coin has landed on tails.");
+			TimeUnit.SECONDS.sleep(4);
+			gender="He";
+			++escape;
+			}
+			if (!(genderCoin.equals("2") || genderCoin.equals("1"))) {
+				System.out.println("Please type either \"1\" or \"2\"");
+			}
+	}
+	
+//d10 Vacc roll
+String moodLine= "";
+if (happy==1) { moodLine="as happy as can be, as if they are exactly what they wanted to be.";}
+if (happy==0) { moodLine="kinda upset, as if the universe has wronged them somehow.";}
+System.out.println("\n\n\n\""+ gender + "'s beautiful. My goodness, our baby is " + moodLine + "\" Your mother hugs you, and it feels as if all is right in the world.");
+TimeUnit.SECONDS.sleep(8);
+System.out.println("This feeling is short lived however, as you soon realize your mother is strongly against vaccinations due to a facebook post her friend Mareelynn made.");
+TimeUnit.SECONDS.sleep(8);
+System.out.println("Essential oils and gaudy clothes attack your newborn senses, it seems she's not only against vaccinations, but fashion and not falling for pyramid schemes aswell.");
+TimeUnit.SECONDS.sleep(8);
+System.out.println("\n\n					---Call a d10 roll for not dying to a preventable disease.");
+TimeUnit.SECONDS.sleep(2);
+System.out.println("				(1-10) If this is number is rolled I will have to restart character creation.");
+TimeUnit.SECONDS.sleep(3);
+int d10choice = s.nextInt();
+int deeTenRoll = deeTen(0);
+boolean death = false;
+if (deeTenRoll == d10choice) {
+	death = true;
+	if (death = true) {
+		System.out.println("Start again!");
+		if (death = true && happy==0) {
+		System.out.println("Hopefully your luck wont be this bad next go around!");}
+		TimeUnit.SECONDS.sleep(1);
+		System.exit(0);
+		}
+
+	}
+else {
+System.out.println("Phew, got that one out of the way. Couldn't avoid getting named Kaiyytelynn(Pronounce Caitlyn) , Time to choose your stats!");
+TimeUnit.SECONDS.sleep(4);
+}
+
+
+
+
+}
+
+	
+	
+private static int coinFlip(int coin){
+Random coinToss = new Random();
+coin = coinToss.nextInt(2);
+return coin;
+}
+
+private static int deeTen(int d10){
+Random d10Toss = new Random();
+d10 = d10Toss.nextInt(9)+1;
+return d10;
+}
+}
