@@ -1,10 +1,10 @@
 import java.util.Scanner;
-import java.util.Random;sDFA
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 public class Introduction {
 
 	public void ntro(String wantedName) throws InterruptedException{
-Scanner s = new Scanner(System.in);
+ new Scanner(System.in);
 String genderCoin;
 System.out.println("//////////////////////////////////////////////////////////////////////////////////////");
 System.out.println("////////////////////////////// Welcome to \"The project\" ////////////////////////////");
