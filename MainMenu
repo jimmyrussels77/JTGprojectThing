@@ -6,7 +6,8 @@ public class MainMenu {
 		
 	System.out.println("Do you want to play a game? ... \n ... Enter Y to continue");
 	input = s.nextLine();
-		
+	
+	//a validation loop to start the game	
 	while(!input.equalsIgnoreCase("y")) {
 			
 		if(counter == 0) { 
@@ -29,6 +30,7 @@ public class MainMenu {
 			input = "y";
 		}
 	} 
+	//builds the game
 	public static void main(String[] args) throws InterruptedException {
 		Scanner s = new Scanner(System.in);
 		Introduction i = new Introduction();
