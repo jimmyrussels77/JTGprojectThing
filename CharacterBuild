@@ -1,0 +1,132 @@
+import java.util.Scanner;
+public class CharacterBuild {
+	private String kline;
+	private int Strength, Speed, Reflex, Charm, Confidence, Leadership;
+	int[] mainAbilities = {Strength, Speed, Reflex,};
+	int[] sideAbilities = {Leadership, Charm, Confidence};
+//constructors
+	    public CharacterBuild() {
+	        mainAbilities = new int[]{0, 0, 0};
+	        sideAbilities = new int[]{0, 0, 0};
+	    }  
+	    
+	    public void CheckStats(Integer[] abilityArray1) {
+		    // display array elements
+		    for (int i = 0; i < abilityArray1.length; i++ ) {
+		    	if (i > 0) {
+		            System.out.print(", ");
+		         }
+		         System.out.print(abilityArray1[i]);
+			}
+
+		    System.out.println();
+		  }
+		
+		public void CheckStats(Integer[] abilityArray1, Integer[] abilityArray2) {
+		    // display array elements
+		    for (int i = 0; i < abilityArray1.length; i++ ) {
+		    	if (i > 0) {
+		            System.out.print(", ");
+		         }
+		         System.out.print(abilityArray1[i]);
+			}
+		    System.out.println();
+		    System.out.println("Leadership, Charm, Confidence");
+		    for (int i = 0; i < abilityArray2.length; i++ ) {
+		    	if (i > 0) {
+		            System.out.print(", ");
+		         }
+		         System.out.print(abilityArray2[i]);
+			}
+		    System.out.println();
+		    
+		  }
+		/*
+		NOTES ON THE METHOD
+		Method intention is to simply print out stats from an array list stored from the 2 arrays in CharacterBuild
+		Main abilities and Side Abilities.
+		Best way to implement the array into the program/story is to offer a choice during any point of the game where the player
+		is able to chose either (in the main method)
+		
+		I dont remember if its either int[] mainAbilities or simply mainAbilities when using the method in Main
+		
+		check main abilities CheckStats(int[] mainAbilities)
+		check side abilities CheckStats(int[] sideAbilities)
+		or both abilities CheckStats{int[] mainAbilities, int [] sideAbilites)
+		To make the information easier to read, add a print line of the abilitys names before using the CheckStats() method
+		Example:
+		While loopFlag = False
+			if (kchoice == 1)
+				//Does something for the story
+				loopFlag = True
+			...
+			if (kchoice == 5) //checks mainAbilities only
+				System.out.println("Strength, Speed, Reflex")
+				CheckStats(int[] mainAbilities)
+				loopFlag == False //Allows user to sill pick a choice
+			if (kchoice == 6)
+				System.out.println("Strength, Speed, Reflex")
+				CheckStats(int[] sideAbilities)
+				loopFlag == False //Allows user to sill pick a choice
+			if (kchoice == 7) // checks side abilities only
+				System.out.println("Leadership, Charm, Confidence")
+				CheckStats(int [] sideAbilities)
+				loopFlag == False //Allows user to sill pick a choice
+			if (kchoice == 8)// checks both abilties
+			System.out.println("Strength, Speed, Reflex")
+				CheckStats(int [] mainabilities, int[] sideAbilities)
+				loopFlag == False //Allows user to sill pick a choice
+				
+		Ask me if you need help implementing these methods into the code.
+		
+		
+		*/
+	 
+	    
+private Scanner s = new Scanner(System.in);
+private int kchoice =0;
+
+
+
+
+	public int[] haracterBuild(int e) {
+System.out.println("These choices will determine your abilities while working, choose wisely!");
+
+System.out.println("After school class in kindergarten!");
+System.out.println("You are being taught thermodynamics by a strange looking 22 year old, who is somehow making the concepts understandable.");
+System.out.println("");
+System.out.println("		During the class you choose to:");
+System.out.println("(1) Listen quietly and enjoy the activities.");
+System.out.println("(2) Do you best to help the teacher when you can, enjoy the class and help others with difficult tasks (like inflating balloons)");
+System.out.println("(3) Ignore all rules and run around the classroom, hiding under desks etc.");
+kchoice = s.nextInt();
+if (!(kchoice==1 || kchoice==2|| kchoice==3)) {
+System.out.println("You are so into not following rules you didnt even enter a proper response! (enter 1, 2, or 3)");
+System.out.println("Nothing of value was gained as a result.");
+}
+else {
+	
+	switch (kchoice) {
+	case 1:
+		kline="Listen";
+		break;
+	case 2:
+		kline="Do";
+		break;
+	case 3:
+		kline="Ignore";
+		break;
+	}
+	System.out.println("you decide to " + kline);
+}
+
+
+
+
+
+
+return mainAbilities;
+	
+	}
+}
+//Kaiyytelynn
